@@ -1,13 +1,14 @@
 interface CanvasProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-export function Canvas({ className }: CanvasProps) {
+export function Canvas({ className, children }: CanvasProps) {
   return (
     <div
-      className={`${className} -z-0 absolute w-16 h-16 rounded-md shadow-lg`}
+      className={`${className} -z-0 w-16 h-16 grid place-items-center rounded-md shadow-lg`}
     >
-      h
+      {children}
     </div>
   );
 }
