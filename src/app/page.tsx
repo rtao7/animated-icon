@@ -3,7 +3,7 @@ import { Canvas } from "./components/Canvas";
 function App() {
   return (
     <div>
-      <div className="group transition-all px-6 h-[90vh] grid place-items-center text-center">
+      <div className="isolate group transition-all px-6 h-[90vh] grid place-items-center text-center">
         <div className="relative flex flex-col gap-4">
           <Canvas className="absolute group-hover:-top-[100px] group-hover:-rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 -rotate-[20deg] -top-12 -left-6">
             <svg
@@ -61,12 +61,16 @@ function App() {
           <Canvas className="absolute group-hover:-top-[110px] group-hover:-right-8 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[10deg] -top-10 -right-2" />
           <Canvas className="absolute group-hover:top-[120px] group-hover:-right-4 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[20deg] top-20 -right-2" />
           <Canvas className="absolute group-hover:-top-[180px] group-hover:-right-4 group-hover:-rotate-[10deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[14deg] -top-20 left-1/2" />
-          <h1 className="z-10 text-3xl font-black font-mono">Animated icons</h1>
+          <h1 className="z-10 text-4xl font-black font-mono text-transparent bg-[linear-gradient(90deg,rgba(255,179,240,0.5),rgba(61,0,121,1),rgba(61,0,121,1),rgba(110,102,212,0.5))] bg-clip-text">
+            Animated icons
+          </h1>
           <p className="z-10 text-base mx-6 md:w-[480px] leading-6 text-muted-foreground">
             A collection of animated SVG icons - Built on top of Lucid Icons.
             Download and use freely. Created by Ray.
           </p>
         </div>
+        <div className="absolute blur-md -z-10 w-[420px] h-[420px] rounded-full bg-[linear-gradient(rgba(255,179,240,0.50),rgba(255,179,240,0.20))] opacity-20"></div>
+        <div className="absolute blur-md -z-10 w-[520px] h-[520px] rounded-full bg-[linear-gradient(rgba(255,207,196,0.50),rgba(255,179,240,0.50))] opacity-20"></div>
       </div>
       <div className="h-dvh flex flex-col gap-6">
         <button>Click Icon to Copy SVG</button>
@@ -82,7 +86,7 @@ function App() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-brush"
+              className="lucide lucide-brush"
             >
               <path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" />
               <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z" />
@@ -99,7 +103,7 @@ function App() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-message-circle"
+              className="lucide lucide-message-circle"
             >
               <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
             </svg>
@@ -115,7 +119,7 @@ function App() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-book-open-text"
+              className="lucide lucide-book-open-text"
             >
               <path d="M12 7v14" />
               <path d="M16 12h2" />
