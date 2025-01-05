@@ -6,7 +6,7 @@ import { LucideIcons } from "./data/icons/lucideIcons";
 
 function App() {
   return (
-    <div className="bg-[linear-gradient(rgba(243,243,243,0.5),rgba(236,247,252,0.5))]">
+    <div className="bg-[linear-gradient(rgba(243,243,243,0.1),rgba(236,247,252,0.3))]">
       <div className="isolate group transition-all px-6 h-[90vh] grid place-items-center text-center">
         <div className="relative flex flex-col gap-4">
           <Canvas className="absolute group-hover:-top-[100px] group-hover:-rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 -rotate-[20deg] -top-12 -left-6">
