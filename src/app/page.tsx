@@ -1,3 +1,5 @@
+// "use client" for rending animation on client side
+"use client";
 import { Canvas } from "./components/Canvas";
 import { heroIcons } from "./data/icons/heroIcons";
 import { LucideIcons } from "./data/icons/lucideIcons";

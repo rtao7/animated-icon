@@ -24,10 +24,10 @@ export const heroIcons: HeroIcons[] = [
           x="1.5"
           y="1.5"
           stroke="url(#a)"
-          stroke-width="3"
+          strokeWidth="3"
           rx="17.5"
         />
-        <circle cx="19" cy="19" r="11" stroke="url(#b)" stroke-width="4" />
+        <circle cx="19" cy="19" r="11" stroke="url(#b)" strokeWidth="4" />
         <defs>
           <linearGradient
             id="a"
@@ -37,9 +37,9 @@ export const heroIcons: HeroIcons[] = [
             y2="38"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFB3F0" />
-            <stop offset=".515" stop-color="#3D0079" />
-            <stop offset="1" stop-color="#6E66D4" />
+            <stop stopColor="#FFB3F0" />
+            <stop offset=".515" stopColor="#3D0079" />
+            <stop offset="1" stopColor="#6E66D4" />
           </linearGradient>
           <linearGradient
             id="b"
@@ -49,9 +49,9 @@ export const heroIcons: HeroIcons[] = [
             y2="32"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FFB3F0" />
-            <stop offset=".515" stop-color="#3D0079" />
-            <stop offset="1" stop-color="#6E66D4" />
+            <stop stopColor="#FFB3F0" />
+            <stop offset=".515" stopColor="#3D0079" />
+            <stop offset="1" stopColor="#6E66D4" />
           </linearGradient>
         </defs>
       </svg>
@@ -108,7 +108,7 @@ export const heroIcons: HeroIcons[] = [
           height="38"
           rx="2"
           stroke="url(#paint0_linear_372_278)"
-          stroke-width="8"
+          strokeWidth="8"
           mask="url(#path-1-inside-1_372_278)"
         />
         <defs>
@@ -180,7 +180,7 @@ export const heroIcons: HeroIcons[] = [
           height="34"
           rx="17"
           stroke="url(#paint0_linear_372_262)"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <defs>
           <linearGradient
