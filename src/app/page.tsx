@@ -51,7 +51,7 @@ function App() {
               <div className="absolute rounded-full blur-lg ring-1 -inset-1 ring-inset bg-slate-100 -z-10"></div>
               <div className="absolute z-0 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent_9%,black_10%,transparent_45%,transparent_65%,black_66%,black_94%,transparent_95%)] opacity-30"></div>
               <div className="absolute z-0 w-[1px] h-full bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent_9%,black_10%,transparent_45%,transparent_65%,black_66%,black_94%,transparent_94%)] opacity-30"></div>
-              <div className="ring-1 inset-1 p-3 bg-gray-50 ring-purple-200 shadow-lg rounded-lg">
+              <div className="overflow-hidden ring-1 inset-1 p-3 bg-gray-50 ring-purple-200 shadow-lg rounded-lg">
                 {icons.svg}
               </div>
             </Canvas>

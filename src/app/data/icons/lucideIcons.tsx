@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 export interface LucideIcon {
   id: number;
@@ -339,7 +339,7 @@ export const LucideIcons: LucideIcon[] = [
         xmlns="http://www.w3.org/2000/svg"
         width="28" // Increased from 28
         height="28" // Increased from 28
-        viewBox="-2 -2 28 28"
+        viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
@@ -373,26 +373,352 @@ export const LucideIcons: LucideIcon[] = [
     id: 9,
     name: "arrow-right",
     svg: (
-      <AnimatePresence initial={false}>
-        <motion.svg
-          key="arrow-right"
-          whileHover={{ x: [0, 5, 0] }}
-          exit={{ x: 0 }}
-          xmlns="http://www.w3.org/2000/svg"
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          className="lucide lucide-arrow-right"
-        >
-          <motion.path d="M5 12h14" />
-          <motion.path d="m12 5 7 7-7 7" />
-        </motion.svg>
-      </AnimatePresence>
+      <motion.svg
+        initial="initial"
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-arrow-right"
+      >
+        <motion.path
+          variants={{
+            whileHover: { x: [0, 40, 0, -40, 0], opacity: [1, 0, 0, 1] },
+          }}
+          d="M5 12h14"
+        />
+        <motion.path
+          variants={{
+            whileHover: { x: [0, 40, 0, -40, 0], opacity: [1, 0, 0, 1] },
+          }}
+          d="m12 5 7 7-7 7"
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 10,
+    name: "chart-column",
+    svg: (
+      <motion.svg
+        initial={false}
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-chart-column-big"
+      >
+        <motion.path d="M3 3v16a2 2 0 0 0 2 2h16" />
+        <motion.rect
+          variants={{
+            whileHover: { scaleY: [1, 1.1, 1.05, 1], y: [0, 1, -3, 0] },
+          }}
+          transition={{ duration: 0.6 }}
+          x="15"
+          y="5"
+          width="4"
+          height="12"
+          rx="1"
+          style={{
+            transformBox: "fill-box",
+            transformOrigin: "bottom",
+          }}
+        />
+        <motion.rect
+          variants={{
+            whileHover: { scaleY: [1, 1.2, 1], y: [0, 1, -3, 0] },
+          }}
+          transition={{ duration: 0.6 }}
+          x="7"
+          y="8"
+          width="4"
+          height="9"
+          rx="1"
+          style={{
+            transformBox: "fill-box",
+            transformOrigin: "bottom",
+          }}
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 11,
+    name: "chart-scatter",
+    svg: (
+      <motion.svg
+        initial="initial"
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-chart-scatter"
+      >
+        <motion.circle
+          variants={{
+            initial: { scale: 1 },
+            whileHover: { scale: 1.1, x: 4, y: 2 },
+          }}
+          cx="7.5"
+          cy="7.5"
+          r=".5"
+          fill="currentColor"
+        />
+        <motion.circle
+          variants={{ whileHover: { scale: 1.1, x: -10 } }}
+          cx="18.5"
+          cy="5.5"
+          r=".5"
+          fill="currentColor"
+        />
+        <motion.circle
+          variants={{ whileHover: { scale: 1.1, y: 5, x: 2 } }}
+          cx="11.5"
+          cy="11.5"
+          r=".5"
+          fill="currentColor"
+        />
+        <motion.circle
+          variants={{ whileHover: { scale: 1.1, y: -2 } }}
+          cx="7.5"
+          cy="16.5"
+          r=".5"
+          fill="currentColor"
+        />
+        <motion.circle
+          variants={{ whileHover: { scale: 1.1, x: 3 } }}
+          cx="17.5"
+          cy="14.5"
+          r=".5"
+          fill="currentColor"
+        />
+        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 12,
+    name: "chart-line",
+    svg: (
+      <motion.svg
+        initial="initial"
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-chart-spline"
+      >
+        <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+        <motion.path
+          variants={{
+            whileHover: { pathLength: [0, 1] },
+          }}
+          transition={{ ease: "easeOut", duration: 0.6 }}
+          d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7"
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 13,
+    name: "chart-pie",
+    svg: (
+      <motion.svg
+        initial="initial"
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-chart-pie"
+      >
+        <motion.path
+          variants={{
+            whileHover: { x: [0, -2, 0, 0], y: [0, 2, 0, 0], scale: [0.8, 1] },
+          }}
+          d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"
+        />
+        <motion.path
+          variants={{
+            whileHover: { pathLength: [0, 1] },
+          }}
+          d="M21.21 15.89A10 10 0 1 1 8 2.83"
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 14,
+    name: "train",
+    svg: (
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-train-front-tunnel"
+      >
+        <motion.path d="M2 22V12a10 10 0 1 1 20 0v10" />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1.1], y: [3, 0] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="M15 6.8v1.4a3 2.8 0 1 1-6 0V6.8"
+        />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1.1] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="M10 15h.01"
+        />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1.1] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="M14 15h.01"
+        />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1.1] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="M10 19a4 4 0 0 1-4-4v-3a6 6 0 1 1 12 0v3a4 4 0 0 1-4 4Z"
+        />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1], y: [0, 1] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="m9 19-2 3"
+        />
+        <motion.path
+          variants={{ whileHover: { scale: [0.6, 1], y: [0, 1] } }}
+          transition={{ ease: "easeInOut", duration: 0.6 }}
+          d="m15 19 2 3"
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 15,
+    name: "plane-takeoff",
+    svg: (
+      <motion.svg
+        initial="initial"
+        whileHover="whileHover"
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-plane-takeoff"
+      >
+        <motion.path
+          variants={{
+            whileHover: { opacity: [1, 0, 1], pathLength: 1 },
+          }}
+          d="M2 22h20"
+        />
+        <motion.path
+          variants={{
+            initial: { rotate: 25, x: 0 },
+            whileHover: {
+              x: [0, 28, 0, -28, 0],
+              opacity: [1, 0, 0, 1],
+            },
+          }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          d="M6.36 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.09.2l4.02 3a2 2 0 0 0 2.1.2l4.19-2.06a2.41 2.41 0 0 1 1.73-.17L21 7a1.4 1.4 0 0 1 .87 1.99l-.38.76c-.23.46-.6.84-1.07 1.08L7.58 17.2a2 2 0 0 1-1.22.18Z"
+        />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 16,
+    name: "@",
+    svg: (
+      <motion.svg
+        initial={false}
+        whileHover={{ rotate: [0, -20, 20, -10, 10, -5, 5, 0] }}
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-at-sign"
+      >
+        <circle cx="12" cy="12" r="4" />
+        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+      </motion.svg>
+    ),
+  },
+  {
+    id: 17,
+    name: "cloud-download",
+    svg: (
+      <motion.svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        className="lucide lucide-cloud-download"
+      >
+        <motion.path
+          variants={{ whileHover: { y: 2 } }}
+          transition={{ type: "spring", bounce: 0.8 }}
+          d="M12 13v8l-4-4"
+        />
+        <motion.path
+          variants={{ whileHover: { y: 2 } }}
+          transition={{ type: "spring", bounce: 0.8 }}
+          d="m12 21 4-4"
+        />
+        <motion.path
+          variants={{ whileHover: { y: -1 } }}
+          transition={{ type: "spring", bounce: 0.8 }}
+          d="M4.393 15.269A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.436 8.284"
+        />
+      </motion.svg>
     ),
   },
 ];
