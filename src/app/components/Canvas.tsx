@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 interface CanvasProps {
   className?: string;
   children?: React.ReactNode;
@@ -5,10 +7,12 @@ interface CanvasProps {
 
 export function Canvas({ className, children }: CanvasProps) {
   return (
-    <div
-      className={`${className} z-10 w-16 h-16 grid place-items-center shadow-sm  bg-white rounded-md`}
+    <motion.div
+      initial="initial"
+      whileHover="whileHover"
+      className={`${className} z-10 w-16 h-16 grid place-items-center shadow-sm  bg-white rounded-lg`}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

@@ -6,7 +6,7 @@ import { LucideIcons } from "./data/icons/lucideIcons";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[repeating-linear-gradient(90deg,rgba(0,0,0,1) 20%,rgba(110,102,212,0.5) 30%)]">
       <div className="isolate group transition-all px-6 h-[90vh] grid place-items-center text-center">
         <div className="relative flex flex-col gap-4">
           <Canvas className="absolute group-hover:-top-[100px] group-hover:-rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 -rotate-[20deg] -top-12 -left-6">
@@ -39,7 +39,15 @@ function App() {
       <div className="h-dvh flex flex-col gap-6">
         <div className="max-w-xl mx-auto grid grid-cols-4 md:grid-cols-6 place-items-center gap-4 px-4">
           {LucideIcons.map((icons) => (
-            <Canvas key={icons.id}>{icons.svg}</Canvas>
+            <Canvas
+              className="isolate relative rounded-xl shadow-[inset_0_0_1px_-1px_rgba(0,0,0,0.3)]"
+              key={icons.id}
+            >
+              <div className="absolute rounded-full blur-lg ring-1 -inset-1 ring-inset bg-slate-100 -z-10"></div>
+              <div className="ring-1 inset-1 p-3 bg-gray-50 ring-slate-200 shadow-lg rounded-lg">
+                {icons.svg}
+              </div>
+            </Canvas>
           ))}
         </div>
       </div>
