@@ -6,7 +6,7 @@ import { LucideIcons } from "./data/icons/lucideIcons";
 
 function App() {
   return (
-    <div className="bg-[repeating-linear-gradient(90deg,rgba(0,0,0,1) 20%,rgba(110,102,212,0.5) 30%)]">
+    <div className="bg-[linear-gradient(rgba(243,243,243,0.5),rgba(236,247,252,0.5))]">
       <div className="isolate group transition-all px-6 h-[90vh] grid place-items-center text-center">
         <div className="relative flex flex-col gap-4">
           <Canvas className="absolute group-hover:-top-[100px] group-hover:-rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 -rotate-[20deg] -top-12 -left-6">
@@ -36,15 +36,20 @@ function App() {
         <div className="absolute -z-0 w-[420px] h-[420px] rounded-full bg-[linear-gradient(rgba(255,179,240,0.2),rgba(255,179,240,0.3))] blur-md shadow-lg opacity-20"></div>
         <div className="absolute blur-md -z-10 w-[520px] h-[520px] rounded-full bg-[linear-gradient(rgba(255,207,196,0.50),rgba(255,179,240,0.50))] opacity-50"></div>
       </div>
-      <div className="h-dvh flex flex-col gap-6">
+      {/* icon gallery container */}
+      <div className="relative h-dvh flex flex-col gap-6">
+        <div className="absolute -top-8 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
         <div className="max-w-xl mx-auto grid grid-cols-4 md:grid-cols-6 place-items-center gap-4 px-4">
           {LucideIcons.map((icons) => (
             <Canvas
               className="isolate relative rounded-xl shadow-[inset_0_0_1px_-1px_rgba(0,0,0,0.3)]"
               key={icons.id}
             >
+              {/* icon canvas background blur */}
               <div className="absolute rounded-full blur-lg ring-1 -inset-1 ring-inset bg-slate-100 -z-10"></div>
-              <div className="ring-1 inset-1 p-3 bg-gray-50 ring-slate-200 shadow-lg rounded-lg">
+              <div className="absolute z-0 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent_9%,black_10%,transparent_45%,transparent_65%,black_66%,black_94%,transparent_95%)] opacity-30"></div>
+              <div className="absolute z-0 w-[1px] h-full bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent_9%,black_10%,transparent_45%,transparent_65%,black_66%,black_94%,transparent_94%)] opacity-30"></div>
+              <div className="ring-1 inset-1 p-3 bg-gray-50 ring-blue-100 shadow-lg rounded-lg">
                 {icons.svg}
               </div>
             </Canvas>
