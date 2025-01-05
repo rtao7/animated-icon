@@ -39,7 +39,9 @@ function App() {
       {/* icon gallery container */}
       <div className="relative h-dvh flex flex-col gap-6">
         <div className="absolute -top-8 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
-        <div className="max-w-xl mx-auto grid grid-cols-4 md:grid-cols-6 place-items-center gap-4 px-4">
+        <div className="relative max-w-xl mx-auto grid grid-cols-4 md:grid-cols-6 place-items-center gap-4 px-4">
+          <div className="absolute -left-2 -top-20 w-[1px] h-dvh bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
+          <div className="absolute -right-2 -top-20 w-[1px] h-dvh bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
           {LucideIcons.map((icons) => (
             <Canvas
               className="isolate relative rounded-xl shadow-[inset_0_0_1px_-1px_rgba(0,0,0,0.3)]"
