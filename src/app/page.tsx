@@ -151,7 +151,7 @@ function App() {
       <div className="relative max-w-xl mx-auto mb-12 p-6 flex flex-col gap-6 items-center h-fit justify-center text-center">
         <h2 className="z-10 text-2xl font-black font-mono">What is this?</h2>
         <div className="leading-8 flex flex-col gap-2 text-muted-foreground">
-          <div className="font-sans text-md rounded-md p-4">
+          <div className="font-sans text-md rounded-md p-4 text-muted-foreground">
             &quot;Simple and thoughtful animation in UI design brings delight
             into the product experience, which also shows the world that product
             makers cares about the detials and what they are shipping into the

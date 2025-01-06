@@ -40,7 +40,7 @@ export const LucideIcons: LucideIcon[] = [
               opacity: 1,
             },
             whileTap: {
-              pathLength: 1,
+              pathLength: [0, 1],
               opacity: 1,
             },
           }}
@@ -92,6 +92,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { opacity: 0, pathLength: 0 },
             whileHover: { opacity: 1, pathLength: 1 },
+            whileTap: { opacity: 1, pathLength: 1 },
           }}
           transition={{ delay: 0.3 }}
           d="M16 12h2"
@@ -100,6 +101,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { opacity: 0, pathLength: 0 },
             whileHover: { opacity: 1, pathLength: 1 },
+            whileTap: { opacity: 1, pathLength: 1 },
           }}
           transition={{ delay: 0.2 }}
           d="M16 8h2"
@@ -109,6 +111,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { opacity: 0, pathLength: 0 },
             whileHover: { opacity: 1, pathLength: 1 },
+            whileTap: { opacity: 1, pathLength: 1 },
           }}
           transition={{ delay: 0.1 }}
           d="M6 12h2"
@@ -117,6 +120,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { opacity: 0, pathLength: 0 },
             whileHover: { opacity: 1, pathLength: 1 },
+            whileTap: { opacity: 1, pathLength: 1 },
           }}
           d="M6 8h2"
         />
@@ -182,6 +186,10 @@ export const LucideIcons: LucideIcon[] = [
               x: [0, -3, 0],
               y: [0, -3, 0],
             },
+            whileTap: {
+              x: [0, -3, 0],
+              y: [0, -3, 0],
+            },
           }}
           transition={{ ease: "easeOut", duration: 0.4 }}
           width="14"
@@ -195,6 +203,11 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { scale: 1, pathLength: 1 },
             whileHover: {
+              x: [0, 3, 0],
+              y: [0, 3, 0],
+              opacity: [0.8, 0, 0.8],
+            },
+            whileTap: {
               x: [0, 3, 0],
               y: [0, 3, 0],
               opacity: [0.8, 0, 0.8],
