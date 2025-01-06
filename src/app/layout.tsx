@@ -3,7 +3,7 @@ import {
   Geist,
   Geist_Mono,
   Major_Mono_Display,
-  JetBrains_Mono,
+  Poppins,
 } from "next/font/google";
 import "./globals.css";
 
@@ -24,9 +24,10 @@ const majorMono = Major_Mono_Display({
   variable: "--font-major-mono", // Optional: if you want to use it as a CSS variable
 });
 
-const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${majorMono.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${majorMono.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

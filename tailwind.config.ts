@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         mono: ["var(--font-major-mono)"],
+        sans: ["var(--font-poppins)"],
       },
       colors: {
         background: "hsl(var(--background))",

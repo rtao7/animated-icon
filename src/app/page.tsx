@@ -8,33 +8,41 @@ import { Badge } from "@/components/ui/badge";
 
 function App() {
   return (
-    <div className="bg-[linear-gradient(180deg,rgba(255,207,196,0.05)_10%,rgba(255,207,196,0.1)_50%,rgba(255,179,240,0.1)_75%,transparent_100%)]">
-      <div className="isolate group transition-all px-6 h-[70vh] grid place-items-center text-center">
+    <div className="font-sans bg-[linear-gradient(180deg,rgba(255,207,196,0.05)_10%,rgba(255,207,196,0.1)_50%,rgba(255,179,240,0.1)_75%,transparent_100%)]">
+      <div className="isolate group transition-all px-6 h-[60vh] grid place-items-center text-center">
         <div className="relative flex flex-col items-center gap-4">
-          <Canvas className="absolute group-hover:-top-[100px] group-hover:-rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 -rotate-[20deg] -top-12 -left-6">
+          <Canvas className="blur-sm absolute -top-[100px] -rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 group-hover:-rotate-[20deg] group-hover:-top-12 -left-6">
             {heroIcons[0].svg}
           </Canvas>
-          <Canvas className="absolute group-hover:top-[100px] group-hover:rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 rotate-[30deg] top-20 -left-10">
+          <Canvas className="blur-sm absolute top-[100px] rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 group-hover:rotate-[30deg] group-hover:top-20 -left-10">
             {heroIcons[1].svg}
           </Canvas>
-          <Canvas className="absolute group-hover:-top-[110px] group-hover:-right-8 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[10deg] -top-10 -right-2">
+          <Canvas className="blur-sm absolute -top-[110px] group-hover:-right-8 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[10deg] group-hover:-top-10 -right-2">
             {heroIcons[2].svg}
           </Canvas>
-          <Canvas className="absolute group-hover:top-[120px] group-hover:-right-4 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[20deg] top-20 -right-2">
+          <Canvas className="blur-sm absolute top-[120px] group-hover:-right-4 group-hover:rotate-[60deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[20deg] group-hover:top-20 -right-2">
             {heroIcons[4].svg}
           </Canvas>
-          <Canvas className="absolute group-hover:-top-[180px] group-hover:-right-4 group-hover:-rotate-[10deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[14deg] -top-20 left-1/2">
+          <Canvas className="blur-sm absolute -top-[180px] -right-4 group-hover:-rotate-[10deg] group-hover:ease-out group-hover:duration-600 duration-300 rotate-[14deg] group-hover:-top-20 left-1/2">
             {heroIcons[3].svg}
           </Canvas>
           <Badge className="rounded-full">Looking for collaborators</Badge>
-          <h1 className="z-10 text-4xl font-black font-mono text-transparent bg-[linear-gradient(90deg,rgba(255,179,240,0.5),rgba(61,0,121,1),rgba(61,0,121,1),rgba(110,102,212,0.5))] bg-clip-text">
+          <h1 className="z-10 text-4xl font-black font-mono text-transparent bg-[linear-gradient(180deg,rgba(255,179,240,0.5),rgba(61,0,121,1),rgba(61,0,121,1),rgba(110,102,212,0.5))] bg-clip-text">
             Animated icons
           </h1>
-          <p className="z-10 font-monoJetBrains text-base mx-6 md:w-[480px] text-muted-foreground">
-            A collection of animated SVG icons - Built using Framer motion and
-            Lucide Icons. Check out Github & Free feel to reuse.
+          <p className="z-10 font-sans text-base mx-6 leading-8 md:w-[480px] text-muted-foreground">
+            A collection of SVG icons{" "}
+            <span className="text-transparent bg-[linear-gradient(180deg,black_25%,transparent)] bg-clip-text">
+              animated
+            </span>
+            . Built using Framer motion and Lucide Icons. Check out Github &
+            Free feel to reuse.
           </p>
-          <Button variant="secondary" className="w-fit" asChild>
+          <Button
+            variant="secondary"
+            className="w-fit shadow-lg hover:bg-slate-100/90"
+            asChild
+          >
             <a href="https://github.com/rtao7/animated-icon" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,14 +64,14 @@ function App() {
           </Button>
           <div className="absolute blur-sm -z-10 w-[520px] h-[520px] rounded-full bg-[linear-gradient(rgba(255,207,196,0.50),rgba(255,179,240,0.50))] opacity-50"></div>
         </div>
-        {/* Glowing Blur Circle in the Background */}
       </div>
       {/* icon gallery container */}
-      <div className="relative h-dvh flex flex-col gap-6">
+      <div className="relative max-w-xl mx-auto text-center h-dvh flex flex-col gap-6">
+        <span>Hover over an icon</span>
         <div className="absolute -top-8 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
         <div className="relative max-w-xl mx-auto flex flex-wrap justify-between md:grid md:grid-cols-6 place-items-center gap-2 md:gap-4 px-4">
           <div className="absolute -left-2 -top-20 w-[1px] h-dvh bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
-          <div className="absolute -right-2 -top-20 w-[1px] h-dvh bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
+          <div className="absolute -right-2 -top-20 wt-[1px] h-dvh bg-[repeating-linear-gradient(180deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)] opacity-20"></div>
           {LucideIcons.map((icons) => (
             <Canvas
               className="isolate relative rounded-xl bg-[linear-gradient(135deg,rgba(243,243,243,0.1)_65%,rgba(236,247,252,0.5))] shadow-[inset_0_0_8px_-3px_rgba(0,0,0,0.3)]"
@@ -110,14 +118,11 @@ function App() {
         <div className="h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_45%,black_55%,transparent)] opacity-30"></div>
       </div>
       {/* Footer */}
-      <div className="relative flex flex-col gap-6 items-center h-[40vh] justify-center text-center">
+      <div className="relative max-w-xl mx-auto flex flex-col gap-6 items-center h-[40vh] justify-center text-center">
         <h2 className="z-10 text-2xl font-black font-mono">What is this?</h2>
-        <div className="">
-          Made by Ray
-          <span>
-            This is a personal projects that I always wanted to do. If you find
-            this useful, and would like to contribute. Let&apos;s chat! ☕️
-          </span>
+        <div className="leading-8 text-muted-foreground">
+          This is a personal projects that I always wanted to do. If you find
+          this useful, and would like to contribute. Let&apos;s chat! ☕️
         </div>
       </div>
     </div>
