@@ -27,7 +27,7 @@ function App() {
             {heroIcons[3].svg}
           </Canvas>
           <Badge className="rounded-full">Looking for collaborators</Badge>
-          <h1 className="z-10 text-4xl font-black font-mono text-transparent bg-[linear-gradient(180deg,rgba(255,179,240,0.5),rgba(61,0,121,1),rgba(61,0,121,1),rgba(110,102,212,0.5))] bg-clip-text">
+          <h1 className="z-10 text-5xl font-black font-mono text-transparent bg-[linear-gradient(180deg,rgba(255,179,240,0.5),rgba(61,0,121,1),rgba(61,0,121,1),rgba(110,102,212,0.5))] bg-clip-text">
             Animated icons
           </h1>
           <p className="z-10 font-sans text-base mx-6 leading-8 md:w-[480px] text-muted-foreground">
