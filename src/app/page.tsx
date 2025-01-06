@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 function App() {
   return (
     <div className="font-sans bg-[linear-gradient(180deg,rgba(255,207,196,0.05)_10%,rgba(255,207,196,0.1)_50%,rgba(255,179,240,0.1)_75%,transparent_100%)]">
-      <div className="isolate group transition-all px-6 my-6 h-[60vh] grid place-items-center text-center">
+      <div className="isolate group transition-all px-6 py-16 h-fit grid place-items-center text-center">
         <div className="relative flex flex-col items-center gap-4">
           <Canvas className="blur-sm absolute -top-[100px] -rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 group-hover:-rotate-[20deg] group-hover:-top-12 -left-6">
             {heroIcons[0].svg}
@@ -91,8 +91,8 @@ function App() {
         </div>
       </div>
       {/* icon gallery container */}
-      <div className="relative max-w-xl my-6 h-dvh mx-auto text-center flex flex-col gap-6">
-        <h2 className="px-6 font-mono font-bold text-base">
+      <div className="relative max-w-xl h-fit my-6 mx-auto text-center flex flex-col gap-6">
+        <h2 className="px-6 font-mono font-bold text-2xl">
           Hover over an icon to see the animation <br />
           <span className="font-sans text-sm font-normal">
             (Desktop support only)
@@ -148,7 +148,7 @@ function App() {
         <div className="h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_45%,black_55%,transparent)] opacity-30"></div>
       </div>
       {/* Footer */}
-      <div className="relative max-w-xl mx-auto px-6 flex flex-col gap-6 items-center h-[40vh] justify-center text-center">
+      <div className="relative max-w-xl mx-auto p-6 flex flex-col gap-6 items-center h-fit justify-center text-center">
         <h2 className="z-10 text-2xl font-black font-mono">What is this?</h2>
         <div className="leading-8 text-muted-foreground">
           This a passion project has been lingering on my mind for awhile.
