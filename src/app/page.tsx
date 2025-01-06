@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 function App() {
   return (
     <div className="font-sans bg-[linear-gradient(180deg,rgba(255,207,196,0.05)_10%,rgba(255,207,196,0.1)_50%,rgba(255,179,240,0.1)_75%,transparent_100%)]">
-      <div className="isolate group transition-all px-6 h-[50vh] grid place-items-center text-center">
+      <div className="isolate group transition-all px-6 my-6 h-[60vh] grid place-items-center text-center">
         <div className="relative flex flex-col items-center gap-4">
           <Canvas className="blur-sm absolute -top-[100px] -rotate-45 group-hover:ease-out group-hover:duration-600 ease-out duration-300 group-hover:-rotate-[20deg] group-hover:-top-12 -left-6">
             {heroIcons[0].svg}
@@ -91,9 +91,12 @@ function App() {
         </div>
       </div>
       {/* icon gallery container */}
-      <div className="relative max-w-xl mx-auto text-center flex flex-col gap-6">
-        <h2 className="font-mono font-bold text-base">
-          Hover over an icon to see the animation
+      <div className="relative max-w-xl my-6 h-dvh mx-auto text-center flex flex-col gap-6">
+        <h2 className="px-6 font-mono font-bold text-base">
+          Hover over an icon to see the animation <br />
+          <span className="font-sans text-sm font-normal">
+            (Desktop support only)
+          </span>
         </h2>
         <div className="absolute -top-8 h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)] opacity-40"></div>
         <div className="relative max-w-xl mx-auto flex flex-wrap justify-between md:grid md:grid-cols-6 place-items-center gap-2 md:gap-4 px-4">
