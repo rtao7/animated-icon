@@ -148,14 +148,22 @@ function App() {
         <div className="h-[1px] w-full bg-[repeating-linear-gradient(90deg,gray,gray_2px,transparent_2px,transparent_4px)] [mask:linear-gradient(90deg,transparent,black_45%,black_55%,transparent)] opacity-30"></div>
       </div>
       {/* Footer */}
-      <div className="relative max-w-xl mx-auto p-6 flex flex-col gap-6 items-center h-fit justify-center text-center">
+      <div className="relative max-w-xl mx-auto mb-12 p-6 flex flex-col gap-6 items-center h-fit justify-center text-center">
         <h2 className="z-10 text-2xl font-black font-mono">What is this?</h2>
-        <div className="leading-8 text-muted-foreground">
-          This a passion project has been lingering on my mind for awhile.
-          I&apos;m currently working on expanding the icon collections and
-          trying to figure out implementing easy download and reuse
-          functionalities. If you find this resource useful and would like to
-          contribute, I&apos;d love to connect! ☕️
+        <div className="leading-8 flex flex-col gap-2 text-muted-foreground">
+          <div className="font-sans text-md rounded-md p-4">
+            &quot;Simple and thoughtful animation in UI design brings delight
+            into the product experience, which also shows the world that product
+            makers cares about the detials and what they are shipping into the
+            world.&quot;
+          </div>
+          <div>
+            This a passion project has been lingering on my mind for awhile.
+            I&apos;m currently working on expanding the icon collections and
+            trying to figure out implementing easy download and reuse
+            functionalities. If you find this resource useful and would like to
+            contribute, I&apos;d love to connect! ☕️
+          </div>
         </div>
         <Button
           variant="secondary"
@@ -177,7 +185,7 @@ function App() {
             >
               <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
             </svg>
-            Twitter
+            Message on Twitter (for now :)
           </a>
         </Button>
       </div>
