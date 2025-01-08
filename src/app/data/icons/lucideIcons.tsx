@@ -154,7 +154,6 @@ export const LucideIcons: LucideIcon[] = [
       >
         <motion.rect
           variants={{
-            initial: { scale: 1 },
             whileHover: {
               x: [0, -3, 0],
               y: [0, -3, 0],
@@ -164,7 +163,6 @@ export const LucideIcons: LucideIcon[] = [
               y: [0, -3, 0],
             },
           }}
-          transition={{ ease: "easeOut", duration: 0.4 }}
           width="14"
           height="14"
           x="8"
@@ -178,15 +176,12 @@ export const LucideIcons: LucideIcon[] = [
             whileHover: {
               x: [0, 3, 0],
               y: [0, 3, 0],
-              opacity: [0.8, 0, 0.8],
             },
             whileTap: {
               x: [0, 3, 0],
               y: [0, 3, 0],
-              opacity: [0.8, 0, 0.8],
             },
           }}
-          transition={{ ease: "easeOut", duration: 0.4 }}
           d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
         />
       </motion.svg>
@@ -215,7 +210,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { scale: 1 },
             whileHover: { scale: [0, 1] },
-            whileTap: { scale: [0, 1] },
+            whileTap: { scale: [1] },
           }}
           x="3"
           y="5"
@@ -227,20 +222,33 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { scale: 1 },
             whileHover: { scale: [0, 1], pathLength: [0, 1] },
+            whileTap: { scale: [1], pathLength: [0, 1] },
           }}
           transition={{ delay: 0.1 }}
           d="m3 17 2 2 4-4"
         />
         <motion.path
-          variants={{ whileHover: { pathLength: [0, 1] } }}
+          variants={{
+            whileHover: { pathLength: [0, 1] },
+            whileTap: { pathLength: [1] },
+          }}
           d="M13 6h8"
+          transition={{ delay: 0.1 }}
         />
         <motion.path
-          variants={{ whileHover: { pathLength: [0, 1] } }}
+          variants={{
+            whileHover: { pathLength: [0, 1] },
+            whileTap: { pathLength: [1] },
+          }}
+          transition={{ delay: 0.14 }}
           d="M13 12h8"
         />
         <motion.path
-          variants={{ whileHover: { pathLength: [0, 1] } }}
+          variants={{
+            whileHover: { pathLength: [0, 1] },
+            whileTap: { pathLength: [1] },
+          }}
+          transition={{ delay: 0.18 }}
           d="M13 18h8"
         />
       </motion.svg>
@@ -253,6 +261,7 @@ export const LucideIcons: LucideIcon[] = [
       <motion.svg
         initial="initial"
         whileHover="whileHover"
+        whileTap="whileTap"
         exit="exit"
         key="scan"
         xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +283,7 @@ export const LucideIcons: LucideIcon[] = [
           variants={{
             initial: { opacity: 1 },
             whileHover: { y: [0, -5, 5, 0] },
-            exit: { opacity: 0 },
+            whileTap: { y: [0, -5, 5, 0] },
           }}
           d="M7 12h10"
         />
