@@ -108,13 +108,16 @@ export const LucideIcons: LucideIcon[] = [
       <motion.svg
         initial="initial"
         whileHover="whileHover"
+        whileTap="whileTap"
         exit="false"
         variants={{
           whileHover: {
             rotate: [0, -360],
           },
+          whileTap: {
+            rotate: [0, -360],
+          },
         }}
-        transition={{ type: "spring", bounce: 0.01 }}
         xmlns="http://www.w3.org/2000/svg"
         width="28"
         height="28"
