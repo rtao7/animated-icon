@@ -18,8 +18,8 @@ const svgVariants = {
     opacity: [0, 1],
   },
   whileTap: {
-    pathLength: [0, 1],
-    opacity: [0, 1],
+    pathLength: [1],
+    opacity: [1, 1],
   },
 };
 
@@ -43,14 +43,10 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-bookmark-check"
+        className="outline-none lucide lucide-bookmark-check"
       >
         <motion.path
           variants={svgVariants}
-          transition={{
-            ease: "easeOut",
-            duration: 0.3,
-          }}
           d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"
         />
         <motion.path
@@ -78,7 +74,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-book-open-text"
+        className="outline-none lucide lucide-book-open-text"
       >
         <path d="M12 7v14" />
         <motion.path
@@ -127,7 +123,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-refresh-ccw"
+        className="outline-none lucide lucide-refresh-ccw"
       >
         <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
         <path d="M3 3v5h5" />
@@ -154,7 +150,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-copy"
+        className="outline-none lucide lucide-copy ring-0"
       >
         <motion.rect
           variants={{
@@ -213,7 +209,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-list-todo"
+        className="outline-none lucide lucide-list-todo"
       >
         <motion.rect
           variants={{
@@ -268,7 +264,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-scan-line"
+        className="outline-none lucide lucide-scan-line"
       >
         <path d="M3 7V5a2 2 0 0 1 2-2h2" />
         <path d="M17 3h2a2 2 0 0 1 2 2v2" />
@@ -306,7 +302,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-bell"
+        className="outline-none lucide lucide-bell"
       >
         <motion.path
           variants={{
@@ -336,7 +332,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-trash"
+        className="outline-none lucide lucide-trash"
         style={{
           transformOrigin: "center",
           transformBox: "fill-box",
@@ -376,7 +372,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-arrow-right"
+        className="outline-none lucide lucide-arrow-right"
       >
         <motion.path
           variants={{
@@ -409,7 +405,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-chart-column-big"
+        className="outline-none lucide lucide-chart-column-big"
       >
         <motion.path d="M3 3v16a2 2 0 0 0 2 2h16" />
         <motion.rect
@@ -461,7 +457,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-chart-scatter"
+        className="outline-none lucide lucide-chart-scatter"
       >
         <motion.circle
           variants={{
@@ -521,7 +517,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-chart-spline"
+        className="outline-none lucide lucide-chart-spline"
       >
         <path d="M3 3v16a2 2 0 0 0 2 2h16" />
         <motion.path
@@ -550,7 +546,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-chart-pie"
+        className="outline-none lucide lucide-chart-pie"
       >
         <motion.path
           variants={{
@@ -581,7 +577,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-train-front-tunnel"
+        className="outline-none lucide lucide-train-front-tunnel"
       >
         <motion.path d="M2 22V12a10 10 0 1 1 20 0v10" />
         <motion.path
@@ -633,7 +629,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-plane-takeoff"
+        className="outline-none lucide lucide-plane-takeoff"
       >
         <motion.path
           variants={{
@@ -671,7 +667,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-at-sign"
+        className="outline-none lucide lucide-at-sign"
       >
         <circle cx="12" cy="12" r="4" />
         <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
@@ -692,7 +688,7 @@ export const LucideIcons: LucideIcon[] = [
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        className="lucide lucide-cloud-download"
+        className="outline-none lucide lucide-cloud-download"
       >
         <motion.path
           variants={{ whileHover: { y: 2 } }}
